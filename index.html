@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: system-ui, "Segoe UI", "Open Sans", "Helvetica Neue";
+        display: grid;
+        place-content: center;
+        background-color: hsl(226, 43%, 10%);
+      }
+      .container {
+        display: grid;
+        width: 800px;
+        height: 400px;
+        background-color: hsl(226, 43%, 10%);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin-left: 50px;
+        margin-top: 40px;
+        gap: 20px;
+      }
+      .box {
+        background-color: hsl(235, 46%, 20%);
+        grid-row: 1/5;
+        grid-column: 1/2;
+        position: relative;
+        z-index: 0;
+        border-radius: 15px;
+      }
+      .jeremy {
+        background-color: hsl(246, 80%, 60%);
+        height: 280px;
+        border-radius: 15px;
+        padding-left: 20px;
+      }
+      .mini-box {
+        margin-top: 40px;
+        height: 140px;
+        width: 165px;
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 13px;
+        padding-top: 10px;
+        padding-left: 20px;
+        position: absolute;
+        z-index: 2;
+      }
+
+      .box-1 {
+        background-color: hsl(15, 100%, 70%);
+        grid-row: 1/3;
+        grid-column: 2/3;
+        border-radius: 15px;
+        position: relative;
+        z-index: 0;
+      }
+      .box-2 {
+        background-color: hsl(195, 74%, 62%);
+        grid-row: 1/3;
+        grid-column: 3/4;
+        border-radius: 15px;
+      }
+      .box-3 {
+        background-color: hsl(348, 100%, 68%);
+        grid-row: 1/3;
+        grid-column: 4/5;
+        border-radius: 15px;
+      }
+      .box-4 {
+        background-color: hsl(145, 58%, 55%);
+        grid-row: 3/5;
+        grid-column: 2/3;
+        border-radius: 15px;
+      }
+      .box-5 {
+        background-color: hsl(264, 64%, 52%);
+        grid-row: 3/5;
+        grid-column: 3/4;
+        border-radius: 15px;
+      }
+      .box-6 {
+        background-color: hsl(43, 84%, 65%);
+        grid-row: 3/5;
+        grid-column: 4/5;
+        border-radius: 15px;
+      }
+      .photo {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        border: 3px solid white;
+        margin-top: 30px;
+      }
+
+      .name {
+        font-size: 35px;
+        font-family: system-ui, "Segoe UI", "Open Sans", "Helvetica Neue";
+
+        color: white;
+      }
+      .heading {
+        line-height: 33px;
+      }
+      .ellip {
+        margin-top: 20px;
+        width: 18px;
+        height: 5px;
+        margin-left: 75px;
+      }
+      .hrs {
+        font-size: 40px;
+        color: white;
+      }
+      .work {
+        margin-top: 20px;
+      }
+      .mini {
+        margin-top: 2px;
+        text-align: 5px;
+      }
+      .daily {
+        display: flex;
+        flex-direction: column;
+        padding-top: 12px;
+        gap: 10px;
+        padding-left: 20px;
+      }
+      .weekly {
+        color: hsl(235, 45%, 61%);
+      }
+      .weekly:hover {
+        color: white;
+      }
+      .icons {
+        width: 53px;
+        height: 50px;
+        margin-left: 120px;
+        position: absolute;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="jeremy">
+          <img class="photo" src="images/image-jeremy.png" alt="photo" />
+          <div class="heading">
+            <p style="color: rgb(184, 174, 174)">Report for</p>
+            <div class="name">Jeremy Robson</div>
+          </div>
+        </div>
+        <div class="daily">
+          <span class="weekly"> Daily</span>
+          <span class="weekly"> Weekly</span>
+          <span class="weekly"> Monthly</span>
+        </div>
+      </div>
+      <div class="box-1">
+        <img class="icons" src="images/icon-work.svg" />
+        <div class="mini-box">
+          <span class="work" style="color: white">Work</span>
+          <img class="ellip" src="images/icon-ellipsis.svg" />
+
+          <div class="mini">
+            <span class="hrs"> 32 hrs </span>
+            <p style="color: hsl(236, 100%, 87%)">Last Week - 8 hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="box-2">
+        <img class="icons" src="images/icon-play.svg" />
+        <div class="mini-box">
+          <span class="work" style="color: white">Play</span>
+          <img class="ellip" src="images/icon-ellipsis.svg" />
+
+          <div class="mini">
+            <span class="hrs"> 10 hrs </span>
+            <p style="color: hsl(236, 100%, 87%)">Last Week - 8 hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="box-3">
+        <img class="icons" src="images/icon-study.svg" />
+        <div class="mini-box">
+          <span class="work" style="color: white">Study</span>
+          <img class="ellip" src="images/icon-ellipsis.svg" />
+
+          <div class="mini-">
+            <span class="hrs"> 4 hrs </span>
+            <p style="color: hsl(236, 100%, 87%)">Last Week - 7 hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="box-4">
+        <img class="icons" src="images/icon-exercise.svg" />
+        <div class="mini-box">
+          <span class="work" style="color: white">Exercise</span>
+          <img class="ellip" src="images/icon-ellipsis.svg" />
+
+          <div class="mini">
+            <span class="hrs"> 4 hrs </span>
+            <p style="color: hsl(236, 100%, 87%)">Last Week - 5 hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="box-5">
+        <img class="icons" src="images/icon-social.svg" />
+        <div class="mini-box">
+          <span class="work" style="color: white">Social</span>
+          <img class="ellip" src="images/icon-ellipsis.svg" />
+
+          <div class="mini">
+            <span class="hrs"> 5 hrs </span>
+            <p style="color: hsl(236, 100%, 87%)">Last Week - 10 hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="box-6">
+        <img class="icons" src="images/icon-self-care.svg" />
+        <div class="mini-box">
+          <span class="work" style="color: white">Self Care</span>
+          <img class="ellip" src="images/icon-ellipsis.svg" />
+
+          <div class="mini">
+            <span class="hrs"> 2 hrs </span>
+            <p style="color: hsl(236, 100%, 87%)">Last Week - 2 hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
